@@ -14,7 +14,7 @@ const notification = {
     icon: path.join(__dirname, '../assets/images/btc.png')
 };
 
-getBTC = () => {
+const getBTC = () => {
     axios.get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC&tsyms=USD')
         .then(res => {            
             const cryptos = res.data.BTC.USD;
